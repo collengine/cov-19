@@ -15,17 +15,17 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 	function covid19ImpactEstimator($data){
 				// Region Data
-		$name= $data['data']['region']['name'];
-		$avgAge= $data['data']['region']['avgAge'];
-		$avgDailyIncomeInUSD= $data['data']['region']['avgDailyIncomeInUSD'];
-		$avgDailyIncomePopulation= $data['data']['region']['avgDailyIncomePopulation'];
+		$name= $data['region']['name'];
+		$avgAge= $data['region']['avgAge'];
+		$avgDailyIncomeInUSD= $data['region']['avgDailyIncomeInUSD'];
+		$avgDailyIncomePopulation= $data['region']['avgDailyIncomePopulation'];
 
 		// Region Data
-		$periodType= $data['data']['periodType'];
-		$timeToElapse= $data['data']['timeToElapse'];
-		$reportedCases= $data['data']['reportedCases'];
-		$population= $data['data']['population'];
-		$totalHospitalBeds= $data['data']['totalHospitalBeds'];
+		$periodType= $data['periodType'];
+		$timeToElapse= $data['timeToElapse'];
+		$reportedCases= $data['reportedCases'];
+		$population= $data['population'];
+		$totalHospitalBeds= $data['totalHospitalBeds'];
 
 
 	//Impact Data
@@ -115,14 +115,17 @@
 		return (int)(($infectionsBRT * $avgDailyIncomeInUSD * $avgDailyIncomePopulation * $days) );
 	}
 	function getDays($type, $value){
+    $days= "days";
+    $weeks= "weeks";
+    $months= "months";
 		switch ($type) {
-			case "days":
+			case $days:
 				return $value;
 				break;
-			case "weeks":
+			case $weeks:
 				return ($value*7);
 				break;
-			case "months":
+			case $months:
 				return ($value*30);
 				break;
 		}
