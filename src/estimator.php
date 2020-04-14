@@ -112,7 +112,7 @@
 		return (int)($infectionsBRT * 0.02);
 	}
 	function getDollarsInFlight($infectionsBRT, $days, $avgDailyIncomeInUSD, $avgDailyIncomePopulation ){
-		return (int)(($infectionsBRT * $avgDailyIncomeInUSD * $avgDailyIncomePopulation * $days) );
+		return (int) ( ($infectionsBRT * $avgDailyIncomeInUSD * $avgDailyIncomePopulation ) / $days );
 	}
 	function getDays($type, $value){
     $days= 'days';
