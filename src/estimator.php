@@ -6,7 +6,7 @@
 
 
 	$response = covid19ImpactEstimator($data);
-	echo json_encode($response, JSON_PRETTY_PRINT);
+	echo $response; //json_encode($response, JSON_PRETTY_PRINT);
 
 
 
@@ -14,7 +14,8 @@
 //Functions
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 	function covid19ImpactEstimator($data){
-				// Region Data
+        // Region Data
+        
 		$name= $data['region']['name'];
 		$avgAge= $data['region']['avgAge'];
 		$avgDailyIncomeInUSD= $data['region']['avgDailyIncomeInUSD'];
@@ -74,8 +75,9 @@
 			'casesForVentilatorsByRequestedTime'=>$casesForVentilatorsByRequestedTimeSevere,
 			'dollarsInFlight'=>$dollarsInFlightSevere, 
 		);
-		$estimate = array('impact'=>$impact,'severeImpact'=>$severeImpact );
-		$data = array('estimate'=>$estimate);
+		$estimate = array('impact' => $impact,'severeImpact' => $severeImpact );
+    $response = array('estimate'=>$estimate);
+    $data = json_encode($response, JSON_PRETTY_PRINT);
 
 		
 		return $data;
@@ -115,9 +117,9 @@
 		return (int)(($infectionsBRT * $avgDailyIncomeInUSD * $avgDailyIncomePopulation * $days) );
 	}
 	function getDays($type, $value){
-    $days= "days";
-    $weeks= "weeks";
-    $months= "months";
+    $days= 'days';
+    $weeks= 'weeks';
+    $months= 'months';
 		switch ($type) {
 			case $days:
 				return $value;
