@@ -57,25 +57,25 @@
 	////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		$impact =  array(
-			"currentlyInfected"=>$currentlyInfected,
-			"infectionsByRequestedTime"=>$infectionsByRequestedTime, 
-			"severeCasesByRequestedTime"=>$severeCasesByRequestedTime,
-			"hospitalBedsByRequestedTime"=>$hospitalBedsByRequestedTime, 
-			"casesForICUByRequestedTime"=>$casesForICUByRequestedTime, 
-			"casesForVentilatorsByRequestedTime"=>$casesForVentilatorsByRequestedTime,
-			"dollarsInFlight"=>$dollarsInFlight, 
+			'currentlyInfected'=>$currentlyInfected,
+			'infectionsByRequestedTime'=>$infectionsByRequestedTime, 
+			'severeCasesByRequestedTime'=>$severeCasesByRequestedTime,
+			'hospitalBedsByRequestedTime'=>$hospitalBedsByRequestedTime, 
+			'casesForICUByRequestedTime'=>$casesForICUByRequestedTime, 
+			'casesForVentilatorsByRequestedTime'=>$casesForVentilatorsByRequestedTime,
+			'dollarsInFlight'=>$dollarsInFlight, 
 		);
 		$severeImpact =  array(
-			"currentlyInfected"=>$currentlyInfectedSevere,
-			"infectionsByRequestedTime"=>$infectionsByRequestedTimeSevere, 
-			"severeCasesByRequestedTime"=>$severeCasesByRequestedTimeSevere,
-			"hospitalBedsByRequestedTime"=>$hospitalBedsByRequestedTimeSevere, 
-			"casesForICUByRequestedTime"=>$casesForICUByRequestedTimeSevere, 
-			"casesForVentilatorsByRequestedTime"=>$casesForVentilatorsByRequestedTimeSevere,
-			"dollarsInFlight"=>$dollarsInFlightSevere, 
+			'currentlyInfected'=>$currentlyInfectedSevere,
+			'infectionsByRequestedTime'=>$infectionsByRequestedTimeSevere, 
+			'severeCasesByRequestedTime'=>$severeCasesByRequestedTimeSevere,
+			'hospitalBedsByRequestedTime'=>$hospitalBedsByRequestedTimeSevere, 
+			'casesForICUByRequestedTime'=>$casesForICUByRequestedTimeSevere, 
+			'casesForVentilatorsByRequestedTime'=>$casesForVentilatorsByRequestedTimeSevere,
+			'dollarsInFlight'=>$dollarsInFlightSevere, 
 		);
-		$estimate = array("impact"=>$impact,"severeImpact"=>$severeImpact );
-		$data = array("estimate"=>$estimate);
+		$estimate = array('impact'=>$impact,'severeImpact'=>$severeImpact );
+		$data = array('estimate'=>$estimate);
 
 		
 		return $data;
