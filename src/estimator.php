@@ -75,10 +75,8 @@
 			'casesForVentilatorsByRequestedTime'=>$casesForVentilatorsByRequestedTimeSevere,
 			'dollarsInFlight'=>$dollarsInFlightSevere, 
 		);
-		$estimate = array('impact' => $impact,'severeImpact' => $severeImpact );
-    $data = array('estimate'=>$estimate);
+		$data = array('data'=>$data, 'impact' => $impact,'severeImpact' => $severeImpact );
     
-
 		
 		return $data;
 	}
