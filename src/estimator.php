@@ -6,7 +6,7 @@
 
 
 	$response = covid19ImpactEstimator($data);
-	echo $response; //json_encode($response, JSON_PRETTY_PRINT);
+	echo json_encode($response, JSON_PRETTY_PRINT);
 
 
 
@@ -76,8 +76,8 @@
 			'dollarsInFlight'=>$dollarsInFlightSevere, 
 		);
 		$estimate = array('impact' => $impact,'severeImpact' => $severeImpact );
-    $response = array('estimate'=>$estimate);
-    $data = json_encode($response, JSON_PRETTY_PRINT);
+    $data = array('estimate'=>$estimate);
+    
 
 		
 		return $data;
