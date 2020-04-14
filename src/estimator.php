@@ -102,8 +102,8 @@
 		return (int)($infectionsBRT * 0.15);
 	}
 	function getHospitalBedsByRequestedTime($severeCasesBRT, $totalHospitalBeds){
-		$availableBeds = (int)(0.35 * $totalHospitalBeds);
-		return $availableBeds - $severeCasesBRT ;
+		$availableBeds = (0.35 * $totalHospitalBeds);
+		return (int)($availableBeds - $severeCasesBRT) ;
 	}
 	function getCasesForICUByRequestedTime($infectionsBRT){
 		return (int)($infectionsBRT * 0.05);
